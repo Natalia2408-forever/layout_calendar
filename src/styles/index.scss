@@ -21,8 +21,10 @@ $days: (
 
 body {
   margin: 0;
+  box-sizing: border-box;
   height: 100vh;
   display: flex;
+  justify-content: center;
   align-items: center;
   font-family: $font-family;
   font-size: $font-size;
@@ -32,7 +34,7 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   gap: $gap-day;
   padding: $calendar-padding;
   width: $calendar-width;
@@ -41,6 +43,7 @@ body {
     box-sizing: border-box;
     display: flex;
     align-items: center;
+    justify-content: center;
     width: $size-day;
     height: $size-day;
     background-color: $background-day;
@@ -63,7 +66,7 @@ body {
 @each $name, $day in $days {
   .calendar--start-day-#{$name} {
     .calendar__day:first-child {
-      margin-left: ($day - 1) * ($size-day + $gap-day);
+      margin-left: $day * ($size-day + $gap-day);
     }
   }
 }
