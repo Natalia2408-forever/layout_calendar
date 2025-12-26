@@ -40,15 +40,15 @@ body {
   width: $calendar-width;
 
   &__day {
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: $size-day;
-    height: $size-day;
-    background-color: $background-day;
-    border: $border-size solid black;
-    transition: all 0.5s;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $size-day;
+  height: $size-day;
+  background-color: $background-day;
+  border: $border-size solid black;
+  transition: all 0.5s;
     &:hover {
       cursor: pointer;
       background-color: #ffbfcb;
@@ -71,7 +71,7 @@ body {
   }
 }
 
-@for $length from 28 through 30 {
+@for $length from 28 through 31 {
   .calendar--month-length-#{$length} {
     .calendar__day:nth-child(n + #{$length + 1}) {
       display: none;
